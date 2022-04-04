@@ -1,6 +1,9 @@
 const puppeteer = require('puppeteer')
 
 describe('Tipos de Espera',()=> {
+
+    jest.setTimeout(60000)//Tiempo de espera Global
+
     it('Mostrar todos los diferentes tipos de espera', async() => {
         const browser = await puppeteer.launch({
             headless: false,            
@@ -40,5 +43,5 @@ describe('Tipos de Espera',()=> {
 
 
         await browser.close()
-    }, 350000)
+    })
 })
